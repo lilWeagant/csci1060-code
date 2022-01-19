@@ -5,12 +5,13 @@ using namespace std;
 
 int main() {
 
-    string fname;
+    string fname, lname;
+//    string lname;
 
-    cout << "Please enter your first name: "; //prompt user for first name
-    cin >> fname;
+    cout << "Please enter your first and last name: "; //prompt user for first and last name
+    cin >> fname >> lname;
 
-    cout << "Hello " << fname << "!" << endl;
+    cout << "Hello " << fname << " " << lname << "!" << endl;
 
     return 0;
-}
+} 
