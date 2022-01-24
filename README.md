@@ -3,3 +3,5 @@
 helloworld.cpp
 mathDemo.cpp
 helloInsertName.cpp
+
+## Week 2 (Jan 24 - 28)
