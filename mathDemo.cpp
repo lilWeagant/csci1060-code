@@ -13,7 +13,7 @@ int main() {
     std::cout << "Enter another integer: "; //prompt user for data
     std::cin >> secondNum; //read second integer into secondNum
 
-    sum = firstNum + secondNum;
+    sum = firstNum + secondNum; //calculate sum by adding firstNum and secondNum
 
     std::cout << "The sum of the numbers you entered is " << sum << std::endl; //display sum, end line
 } //end of main
