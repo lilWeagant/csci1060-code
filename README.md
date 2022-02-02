@@ -10,4 +10,6 @@
 - random_demo.cpp
 
 ## Week 3 (Jan 31 - Feb 4)
-- 
+- function_demo.cpp
+- function_returns.cpp
+- overloaded_function.cpp
