@@ -13,3 +13,7 @@
 - function_demo.cpp
 - function_returns.cpp
 - overloaded_function.cpp
+- exercise.cpp
+
+## Week 4 (Feb 7 - 11)
+- fileio.cpp
