@@ -17,3 +17,18 @@
 
 ## Week 4 (Feb 7 - 11)
 - fileio.cpp
+
+## Week 5 (Feb 14 - 18)
+- strings_ex1.cpp
+- strings_ex2.cpp
+- strings_ex3.cpp
+
+## Week 6 (READING WEEK)
+
+## Week 7 (Feb 28 - Mar 4)
+- arrays.cpp
+- bubblesort.cpp
+- tictactoe.cpp
+
+## Week 8 (Mar 7 - 11)
+- tictactoe.cpp
