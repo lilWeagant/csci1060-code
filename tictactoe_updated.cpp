@@ -31,8 +31,11 @@ int main() {  //control the flow of our program/game
         cin >> position;
         addPiece(position, isX); //add a piece to the board
         totalMoves--;
-        findWinner(isX);
+        won = findWinner(isX);
         isX = !isX; //will swap value of isX
+    }
+    if ((!isWon) && (totalMoves == 0)){
+        cout << "It's a tie!" << endl;
     }
 
     return 0;
@@ -52,6 +55,7 @@ bool findWinner(bool isX){
     7 8 9
     */
    if (board[0][0] == piece && board[0][1] == piece && board[0][2] == piece){
+       cout << piece << " wins!" << endl;
        return true;
    }
    /*
@@ -59,12 +63,72 @@ bool findWinner(bool isX){
    X X X
    7 8 9
    */
+    else if (board[1][0] == piece && board[1][1] == piece && board[1][2] == piece){
+        cout << piece << " wins!" << endl;
+        return true;
+    }
 
   /*
   1 2 3 
   4 5 6
   X X X
   */
+    else if (board[2][0] == piece && board[2][1] == piece && board[2][2] == piece){
+        cout << piece << " wins!" << endl;
+        return true;
+    }
+
+    /*
+    X 2 3
+    X 5 6
+    X 8 9
+    */
+    else if (board[0][0] == piece && board[1][0] == piece && board[2][0] == piece ){
+        cout << piece << " wins!" << endl;
+        return true;
+    }
+
+    /*
+    1 X 3
+    4 X 6
+    7 X 9
+    */
+
+    else if (board[0][1] == piece && board[1][1] == piece && board[2][1] == piece){
+        cout << piece << " wins!" << endl;
+        return true;
+    }
+
+    /*
+    1 2 X
+    4 5 X
+    7 8 X
+    */
+   else if (board[0][2] == piece && board[1][2] == piece && board[2][2] == piece){
+       cout << piece << " wins!" << endl;
+       return true;
+   }
+
+   /*
+   X 2 3
+   4 X 6
+   7 8 X
+   */
+
+    else if (board[0][0] == piece && board[1][1] == piece && board[2][2] == piece){
+        cout << piece << " wins!" << endl;
+        return true;
+    }
+
+    /*
+    1 2 X
+    4 X 6
+    X 8 9
+    */
+   else if (board[0][2] == piece && board[1][1] == piece && board[2][0] ==  piece){
+       cout << piece << " wins!" << endl;
+       return true;
+   }
 
  
 }
