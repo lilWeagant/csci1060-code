@@ -17,6 +17,7 @@
 
 ## Week 4 (Feb 7 - 11)
 - fileio.cpp
+- Test 1
 
 ## Week 5 (Feb 14 - 18)
 - strings_ex1.cpp
@@ -32,3 +33,8 @@
 
 ## Week 8 (Mar 7 - 11)
 - tictactoe.cpp
+- Test 2
+
+## Week 9 (Mar 14 - 18)
+- pointers.cpp
+- pointers_example.cpp
