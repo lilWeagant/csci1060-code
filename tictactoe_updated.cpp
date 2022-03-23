@@ -4,17 +4,23 @@
 using namespace std;
 
 const int SIZE = 3;
-char board[SIZE][SIZE];
+//char board[SIZE][SIZE]; //replace this variable with a dynamic array
 //game pieces
 const char X = 'X';
 const char O = 'O';
 //game setup
-void initializeBoard();
-void displayBoard();
-void addPiece(char, bool);
-bool findWinner(bool); //could also include position as a parameter
+void initializeBoard(char**); //take board as a parameter
+void displayBoard(char**); //take board as a parameter
+void addPiece(char, bool, char**); //take board as parameter
+//bool findWinner(bool, char**); //could also include position as a parameter
 
 int main() {  //control the flow of our program/game
+
+    //define board array as dynamic array here
+    char** board = new char*[SIZE];
+    for (int i = 0; i < SIZE; i++){
+        board[i] = new char[SIZE];
+    }
 
     bool isX = true; //true if it is X's turn, false if O's turn
     bool won = false; //set to true if a player wins the game
@@ -22,26 +28,31 @@ int main() {  //control the flow of our program/game
     char position; //value from the user to place game piece
 
     //initialize board -> set values 1 - 9
-    initializeBoard();
-    displayBoard();
+    initializeBoard(board);
+    displayBoard(board);
 
     //gameplay loop
     while ((totalMoves > 0) && !won) {
         cout << "Where would you like to play?" << endl;
         cin >> position;
-        addPiece(position, isX); //add a piece to the board
+        addPiece(position, isX, board); //add a piece to the board
         totalMoves--;
-        won = findWinner(isX);
+//        won = findWinner(isX, board);
         isX = !isX; //will swap value of isX
     }
-    if ((!isWon) && (totalMoves == 0)){
+    if ((!won) && (totalMoves == 0)){
         cout << "It's a tie!" << endl;
     }
+
+    for (int i = 0; i < SIZE; i++){
+        delete[] board[i];
+    }
+    delete[] board;
 
     return 0;
 }
 
-bool findWinner(bool isX){
+bool findWinner(bool isX, char** board){
     char piece;
     if (isX){
         piece = X;
@@ -133,7 +144,7 @@ bool findWinner(bool isX){
  
 }
 
-void addPiece(char position, bool isX){
+void addPiece(char position, bool isX, char** board){
     cout << "Placing on position " << position << endl;
     cout << "Value of isX: " << isX << endl;
 
@@ -149,10 +160,10 @@ void addPiece(char position, bool isX){
             }
         }
     }
-    displayBoard();
+    displayBoard(board);
 }
 
-void initializeBoard(){
+void initializeBoard(char** board){
     int count = 1; //value used to populate array
     for (int i = 0; i < SIZE; i++){
         for (int j = 0; j < SIZE; j++){
@@ -162,7 +173,7 @@ void initializeBoard(){
     }
 }
 
-void displayBoard(){
+void displayBoard(char** board){
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
             cout << board[i][j] << " ";

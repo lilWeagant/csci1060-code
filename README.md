@@ -38,3 +38,7 @@
 ## Week 9 (Mar 14 - 18)
 - pointers.cpp
 - pointers_example.cpp
+- tictactoe_updated.cpp
+
+## Week 10 (Mar 21 - 25)
+- classes.cpp
