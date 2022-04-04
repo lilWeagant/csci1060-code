@@ -15,11 +15,11 @@ struct Node {
 class Stack {
     Node* top;
     public:
-        Stack();
-        bool isEmpty();
-        void push(string d);
-        string pop();
-        string toString();
+        Stack(); //constructor -> create new (empty) stack
+        bool isEmpty(); //check if stack is empty
+        void push(string d); //push new node to top of stack
+        string pop(); //remove node from top of stack
+        string toString(); //print contents of stack
 };
 
 Stack::Stack(){
@@ -32,6 +32,7 @@ bool Stack::isEmpty(){
 
 void Stack::push(string d){
     Node* newtop = new Node; //dynamically creating a new node
+
     newtop->data = d;
     newtop->next = top; //point to the current top of the node
 
@@ -64,7 +65,7 @@ string Stack::toString(){ //print the stack in human-readable format
 }
 
 int main(){
-
+    //driver code
     Stack *s = new Stack();
     cout << s->toString() << endl;
     s -> push("Yoda"); //push Yoda to top of stack
