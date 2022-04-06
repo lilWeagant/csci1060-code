@@ -46,3 +46,7 @@
 ## Week 11 (March 28 - April 1)
 - classesII.cpp
 - stack.cpp
+
+## Week 12 (April 4 - 8)
+- vectors.cpp
+- game.cpp
