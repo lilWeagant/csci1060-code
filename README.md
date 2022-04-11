@@ -50,3 +50,7 @@
 ## Week 12 (April 4 - 8)
 - vectors.cpp
 - game.cpp
+
+## Week 13 (April 11 - 14)
+- iterators.cpp
+- vector_problems.cpp
