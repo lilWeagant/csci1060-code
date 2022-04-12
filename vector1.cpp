@@ -1,25 +1,28 @@
 /*
 Author: Andrew Dale
+Edited by: Riley Weagant
 */
 #include <vector> 
 #include <iostream>
 #include <string>
 
-int findMax(std::vector<int>);
+using namespace std;
+
+int findMax(vector<int>);
 int main(){
-  std::vector<int> vec = {5, 8, 2, 8, 5, 8, 2};
+  vector<int> vec = {5, 8, 2, 8, 5, 8, 2};
   int maxVal = findMax(vec);
   
-  std::cout << "Maximum value from vector is: " << maxVal << std::endl;
+  cout << "Maximum value from vector is: " << maxVal << std::endl;
   return 0;
 }
 
 
-int findMax(std::vector<int> v){
+int findMax(vector<int> v){
   int maxVal = 0;
-  for(const auto &value : v){
-    if(value > maxVal){
-      maxVal = value;
+  for(int i = 0; i < v.size(); i++){
+    if(v[i] > maxVal){
+      maxVal = v[i];
     }
   }
   return maxVal;

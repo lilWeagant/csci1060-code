@@ -1,15 +1,18 @@
 /*
 Author: Andrew Dale
+Edited by: Riley Weagant
 */
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class Player{
-  std::string name;
+  string name;
   int roll_num;
   public:
-    void setName(std::string n){this->name = n;}
-    std::string getName(){return this->name;}
+    void setName(string n){this->name = n;}
+    string getName(){return this->name;}
     void setRollNum(int r){this->roll_num = r;}
     int getRollNum(){return this->roll_num;}
 };
@@ -25,9 +28,9 @@ int main(){
   player2.setRollNum(0);
   
   
-  std::cout << "Player 1 name: " << player1.getName() << ", Number of rolls: " 
-  << player1.getRollNum() << std::endl;
+  cout << "Player 1 name: " << player1.getName() << ", Number of rolls: " 
+  << player1.getRollNum() << endl;
   
-  std::cout << "Player 2 name: " << player2.getName() << ", Number of rolls: " 
-  << player2.getRollNum() << std::endl;
+  cout << "Player 2 name: " << player2.getName() << ", Number of rolls: " 
+  << player2.getRollNum() << endl;
 }
