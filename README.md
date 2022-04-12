@@ -54,3 +54,11 @@
 ## Week 13 (April 11 - 14)
 - iterators.cpp
 - vector_problems.cpp
+- Test 3
+
+# Practice Problem Solutions
+- classes1.cpp
+- classes2.cpp
+- classes3.cpp
+- vector1.cpp
+- vector2.cpp
